@@ -1,9 +1,14 @@
 <div>
   <h4>Todo List</h4>
   <p *ngIf="todos?.length === 0">Looks like you're all done!</p>
+
+  <app-add-todo-form (added)="onAdded($event)"></app-add-todo-form>
+
   <app-todo-list-item
     *ngFor="let todo of todos"
     [todo]="todo"
     (deleted)="onDelete($event)"
   ></app-todo-list-item>
+
+  <button *ngIf="debug" (click)="fetchTodos(true)">debug: refresh from server</button>
 </div>

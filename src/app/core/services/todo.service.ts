@@ -22,6 +22,10 @@ export class TodoService {
     return this.http.get<Todo[]>(baseUrl);
   }
 
+  add(text: string, done = false): Observable<Todo> {
+    return this.http.post<Todo>(baseUrl, { text, done }, httpOptions);
+  }
+
   update(todo: Todo): Observable<Todo> {
     return this.http.put<Todo>(baseUrl, todo, httpOptions);
   }

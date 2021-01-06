@@ -18,6 +18,11 @@ export class MockDbService implements InMemoryDbService {
       {
         id: this.genId(),
         text: 'Build a basic todo-list feature',
+        done: true,
+      },
+      {
+        id: this.genId(),
+        text: 'Generate a toast notification for debug: refresh from server button',
         done: false,
       },
     ];
