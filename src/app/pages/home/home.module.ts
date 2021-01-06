@@ -8,13 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { TodoListModule } from '@features/todo-list/todo-list.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule,
-    TodoListModule,
-  ],
+  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule, TodoListModule],
   declarations: [HomePage],
 })
 export class HomePageModule {}
