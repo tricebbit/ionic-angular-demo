@@ -1,4 +1,9 @@
 <div>
   <h4>Todo List</h4>
-  <app-todo-list-item *ngFor="let todo of todos" [todo]="todo"></app-todo-list-item>
+  <p *ngIf="todos?.length === 0">Looks like you're all done!</p>
+  <app-todo-list-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (deleted)="onDelete($event)"
+  ></app-todo-list-item>
 </div>

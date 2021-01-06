@@ -1,3 +1,7 @@
-<div [class.done]="todo.done">
+<div class="container" [class.done]="todo.done">
   <span class="text">{{ todo.text }}</span>
+  <button (click)="toggle()">
+    {{ todo.done ? 'undo' : 'done' }}
+  </button>
+  <button class="delete" *ngIf="todo.done" (click)="delete()">delete</button>
 </div>

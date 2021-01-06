@@ -17,4 +17,8 @@ export class TodoListComponent implements OnInit {
       this.todos = todos;
     });
   }
+
+  onDelete(id: string) {
+    this.todos = this.todos.filter(t => t.id !== id);
+  }
 }
